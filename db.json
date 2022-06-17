@@ -1,0 +1,91 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta BIC preta",
+      "price": 2.52
+    },
+    {
+      "id": 2,
+      "name": "MAC BOOK",
+      "price": 25999.99
+    },
+    {
+      "id": 3,
+      "name": "SAMSUNG S10+",
+      "price": 9999.99
+    },
+    {
+      "name": "geladeira",
+      "price": "1914.99",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "TV 50'' ",
+      "price": "3000.00"
+    },
+    {
+      "id": 6,
+      "name": "cama casal molas",
+      "price": "6000.00"
+    },
+    {
+      "name": "sofa tres lugares",
+      "price": "7000.00",
+      "id": 7
+    },
+    {
+      "name": "Mesa 10 lugares",
+      "price": "5000.00",
+      "id": 8
+    }
+  ],
+  "personagem": [
+    {
+      "id": 1,
+      "age": 25,
+      "name": "Aniak",
+      "classe": "Alsaif",
+      "especie": "Dovah",
+      "langage": [
+        "ingland",
+        "dovah"
+      ],
+      "player": "Tamer",
+      "xp": 2670,
+      "level": 0,
+      "titulo ": "al saif",
+      "força": 3,
+      "resistencia": 2,
+      "agilidade ": 0,
+      "persepcao ": 0,
+      "presisao ": 0,
+      "inteligencia": 0,
+      "sopro": 2,
+      "coragem": 3,
+      "carisma": 0,
+      "talento": "historia",
+      "aptidoes": [
+        "cartografia",
+        "navegante",
+        "domar ",
+        "nadar",
+        "ferreiro_1",
+        "cienciaSopro_1"
+      ],
+      "ventura": 1,
+      "vontade": 0,
+      "estresse": 120,
+      "medo": 0,
+      "tendencia": 0,
+      "dinheiro": 1625,
+      "status": 4,
+      "dano": "",
+      "defesa": "",
+      "valorArmadura": "",
+      "valorArma": "",
+      "hitpoint": ""
+    }
+  ]
+}
