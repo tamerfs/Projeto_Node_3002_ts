@@ -1,4 +1,4 @@
-# Projeto de serviço de autenticação 
+# Projeto de microserviço de autenticação 
 
 sistema a ser criado usando o node.js 
 
