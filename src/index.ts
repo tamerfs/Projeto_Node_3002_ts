@@ -1,5 +1,6 @@
 import express from 'express';
-import initRoute from './routes/init.route';
+import errorHanddler from './middlewares/error-handler.middleware';
+import initRoute from './routes/init.route';//
 import statusRoute from './routes/status.route';
 import usersRoute from './routes/users.route';
 
@@ -7,8 +8,8 @@ import usersRoute from './routes/users.route';
 const app = express();
 
 //configurações para a porta
-const host = 'http://localhost';
 const port = 3002;
+const host = 'http://localhost';
 
 // configuração da aplicação
 app.use(express.json());
@@ -20,6 +21,8 @@ app.use(usersRoute);
 app.use(statusRoute);
 app.use(initRoute);
 
+//configração dos handdlers de erro
+app.use(errorHanddler);
 
 // iniciando o servidor escutando na porta setada na const acima
 app.listen(port, () => {
