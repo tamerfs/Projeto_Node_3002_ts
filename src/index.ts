@@ -1,4 +1,5 @@
 import express from 'express';
+import bearerAuthenticationMiddleware from './middlewares/bearer-authenticationmiddleware';
 import errorHanddler from './middlewares/error-handler.middleware';
 import authorizationRoute from './routes/autorization.route';
 import initRoute from './routes/init.route';//
@@ -18,22 +19,21 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // configuração de rotas.
-app.use(usersRoute);
-app.use(statusRoute);
-app.use(authorizationRoute);
-// iniciando nossa rota/ verificar o uso
-app.use(initRoute);
+app.use(initRoute);//  root '/'  padrão de entrada ao app
+app.use(statusRoute); // root '/status' 
+app.use(authorizationRoute); // root '/token' 
+app.use(bearerAuthenticationMiddleware, usersRoute);// root '/users' para os comandos em http
+
+
 
 //configração dos handdlers de erro
 app.use(errorHanddler);
 
 // iniciando o servidor escutando na porta setada na const acima
 app.listen(port, () => {
-    console.log(`app rodando no ${host}:${port}`)
+    console.log(`app rodando no ${host}:${port}`)//mensagem do console com concatenação de string + variaveis
 })
 
+const link = 'ao '+host+':'+port+'/' ;
 
-//mensagem do console.log com concatenação de string + variaveis
-
-//const MSG: string = `Server rodando com sucesso! vá para ${host}:${port}/status ou para /users  ainda adicione o UUID com /123 por exemplo`;
-//export default MSG;
+export default link;
