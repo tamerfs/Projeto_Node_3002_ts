@@ -1,5 +1,5 @@
 import express from 'express';
-import bearerAuthenticationMiddleware from './middlewares/bearer-authenticationmiddleware';
+import jwtAuthenticationMiddleware from './middlewares/jwt-authenticationmiddleware';
 import errorHanddler from './middlewares/error-handler.middleware';
 import authorizationRoute from './routes/autorization.route';
 import initRoute from './routes/init.route';//
@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(initRoute);//  root '/'  padrão de entrada ao app
 app.use(statusRoute); // root '/status' 
 app.use(authorizationRoute); // root '/token' 
-app.use(bearerAuthenticationMiddleware, usersRoute);// root '/users' para os comandos em http
+app.use(jwtAuthenticationMiddleware, usersRoute);// root '/users' para os comandos em http
 
 
 
