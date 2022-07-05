@@ -2,7 +2,6 @@ import  JWT  from 'jsonwebtoken';
 import { Request, Response, NextFunction } from 'express';
 import ForbiddenError from '../models/errors/forbidden.error.model';
 //import userRepository from '../repositories/user.repository'; tirado por não precisar neste caso especifico consultar o usuario no BD.
-// admin "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjU2NDU5NDI5LCJzdWIiOiI3Njc4ZDQ1ZS0xNmI3LTRlOWEtOGQxNy01NmZhNzlmZjVlZTIifQ.oaU2IfdNHPM_EVw0jlXS4llHaqgZd7HVbOn6rD7WWGc"
 
 async function jwtAuthenticationMiddleware(req:Request,res:Response,next:NextFunction){
     try {
